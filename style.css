@@ -238,6 +238,9 @@ header {
     line-height: 140%;
     color: #373737;
 }
+.slider-left, .slider-right {
+    cursor: pointer;
+}
 .slider-wrapper {
     width: 908px;
     overflow: hidden;
