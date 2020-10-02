@@ -1,5 +1,122 @@
+/* *************************************************************************** */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+h2 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+h3 {
+    font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+    h3{
+        font-size: 1.75rem;
+    }
+}
+strong {
+    font-weight: bolder;
+}
+img,
+svg {
+    vertical-align: middle;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button,
+input {
+    overflow: visible;
+}
+button,
+select {
+    text-transform: none;
+}
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+/* *************************************************************************** */
 * {
     font-family: "Roboto", sans-serif;
+}
+.visuallyhidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
 }
 .head-wrapper,
 .footer-wraper {
@@ -59,7 +176,11 @@ header {
     height: 1px; /*задаём ширину линии*/
     background-color: #ffffff;
     content: "";
+<<<<<<< HEAD
+    transition: width 0s ease-out; /*задаём время анимации*/
+=======
     transition: width 0.0s ease-out;
+>>>>>>> master
 }
 .header-links a:hover:after {
     width: 100%;
@@ -106,6 +227,7 @@ header {
     background: #00afdb;
     color: #ffffff;
     border: none;
+    cursor: pointer;
 }
 .main-btn:focus {
     outline: none;
@@ -240,6 +362,10 @@ header {
     line-height: 140%;
     color: #373737;
 }
+.slider-left,
+.slider-right {
+    cursor: pointer;
+}
 .slider-wrapper {
     width: 908px;
     overflow: hidden;
@@ -315,6 +441,7 @@ header {
     background: #00afdb;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 .sign-up-part-form button:hover {
     background: #009cc2;
@@ -371,6 +498,7 @@ header {
     border: none;
     outline: none;
     padding: 0;
+    cursor: pointer;
 }
 .download-app-btn:focus {
     outline: none;
@@ -421,11 +549,11 @@ header {
 }
 .logo-block {
     margin-top: 60px;
-    margin-left: 252px;
+    margin-left: 193px;
 }
 .footer-links {
     margin-top: 72px;
-    margin-left: -85px;
+    margin-left: 4px;
 }
 .footer-links a {
     position: relative;
@@ -435,6 +563,7 @@ header {
     line-height: 140%;
     color: #ffffff;
     margin-left: 37px;
+    text-decoration: none;
     /* opacity: 0.98; */
 }
 .footer-links a::before {
@@ -457,6 +586,20 @@ header {
     line-height: 140%;
     color: #818181;
     margin-top: 74px;
-    margin-left: 127px;
+    margin-left: 68px;
     min-width: 24%;
+}
+
+.footer-links a:after {
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0; /*задаём длинну линии до наведения курсора*/
+    height: 1px; /*задаём ширину линии*/
+    background-color: #ffffff; /*задаём цвет линии*/
+    content: "";
+    transition: width 0s ease-out; /*задаём время анимации*/
+}
+.footer-links a:hover:after {
+    width: 100%;
 }
