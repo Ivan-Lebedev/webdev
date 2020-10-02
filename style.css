@@ -215,6 +215,9 @@ header {
     align-items: center;
     position: relative;
 }
+.slider-left, .slider-right {
+    cursor: pointer;
+}
 .slider-content {
     width: 894px;
     display: flex;
