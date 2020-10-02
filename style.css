@@ -168,16 +168,19 @@ header {
 .header-links a:hover {
     text-shadow: 0 0 0.9px #ffffff, 0 0 0.9px #ffffff, 0 0 0.9px #ffffff;
 }
-/* https://moguta.ru/blog/delaem-internet-magazin-vmeste/plavnoe-podchyorkivanie-ssylki-pri-navedenii */
 .header-links a:after {
     display: block;
     position: absolute;
     left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
     width: 0; /*задаём длинну линии до наведения курсора*/
     height: 1px; /*задаём ширину линии*/
-    background-color: #ffffff; /*задаём цвет линии*/
+    background-color: #ffffff;
     content: "";
+<<<<<<< HEAD
     transition: width 0s ease-out; /*задаём время анимации*/
+=======
+    transition: width 0.0s ease-out;
+>>>>>>> master
 }
 .header-links a:hover:after {
     width: 100%;
@@ -333,6 +336,9 @@ header {
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+.slider-left, .slider-right {
+    cursor: pointer;
 }
 .slider-content {
     width: 894px;
